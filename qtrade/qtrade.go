@@ -35,7 +35,7 @@ func FetchCrypto(fiat string , crypto string) (string, error) {
    }
    defer resp.Body.Close()
 //Create a variable of the same type as our model
-   var cResp model.Cryptoresponse
+   var cResp Cryptoresponse
 //Decode the data
    if err := json.NewDecoder(resp.Body).Decode(&cResp); err != nil {
       log.Fatal("ooopsss! an error occurred, please try again")
